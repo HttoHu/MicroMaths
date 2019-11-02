@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="微数.Pages.引导页.高级索引页"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:微数.Pages.引导页"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid  x:Name="MainPane" Background="LightGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button Name="一元不等式"   HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,5,0,0" Height="130" Width="170" Background="{ThemeResource SystemControlBackgroundAccentBrush}" Click="一元不等式_Click">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Name="btnIcon" Text="&#xED5E;" Foreground="White" FontSize="26" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center"/>
+                <TextBlock Name="btnText" Foreground="White" FontSize="24" HorizontalAlignment="Center" Text="解不等式"></TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Button Name="解三角形"  HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Margin="5,5,0,0" Height="130" Width="170" Background="{ThemeResource SystemControlBackgroundAccentBrush}" Click="解三角形_Click">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Name="btnIcon2" Text="&#xE1D0;" Foreground="White" FontSize="26" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center"/>
+                <TextBlock Name="btnText2" Text="解三角形" Foreground="White" FontSize="24" HorizontalAlignment="Center"></TextBlock>
+            </StackPanel>
+        </Button>
+
+        <TextBlock TextWrapping="Wrap" Margin="10,10,10,10" Text="* 以上功能均为对外开放的实验性功能，可能会出现Bug，无法正常计算等各种问题，请您谅解，我们将尽快开发完毕。" FontWeight="Light" FontSize="14" Foreground="White" Grid.Row="2" Grid.ColumnSpan="1"/>
+
+    </Grid>
+</Page>

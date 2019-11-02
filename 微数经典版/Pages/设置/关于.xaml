@@ -1,0 +1,57 @@
+﻿<Page
+    x:Class="微数2.Pages.设置.关于"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:微数2.Pages.设置"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ScrollViewer Name="MainPane" VerticalScrollBarVisibility="Hidden" Height="Auto">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Height="250" Background="{ThemeResource SystemControlBackgroundAccentBrush}">
+                <Image Margin="0,15,0,20" Source="ms-appx:///Assets\Square150x150Logo.scale-200.png" Height="80" Width="80"/>
+                <TextBlock TextWrapping="Wrap" FontWeight="Light" Margin="0,-10,0,0" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Text="微数"/>
+                <StackPanel>
+                    <TextBlock TextWrapping="Wrap" Margin="0,10,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Name="VerTextBlock" FontWeight="Light" FontSize="20" Foreground="White" Text="2.0"/>
+                    <TextBlock TextWrapping="Wrap" Margin="0,3,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Light" FontSize="18" Foreground="White" Text="先于操作，发力计算"/>
+                    <TextBlock TextWrapping="Wrap" Margin="0,10,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Light" Name="CopyrightTextBlock1" FontSize="14" Foreground="White" Text="版权所有 © Htto 与 疾速飞翔 2017"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Background="White" Grid.Row="1">
+                <StackPanel>
+                    <StackPanel Background="White" Margin="0,15,0,0">
+                        <TextBlock TextAlignment="Center" HorizontalAlignment="Center"  TextWrapping="Wrap" Margin="5,0,5,10" FontSize="15" >
+                                            <Run FontSize="20">制作团队</Run><LineBreak/>
+                                            <Run>开发：</Run><Hyperlink>Htto</Hyperlink><Run> 和 </Run><Hyperlink NavigateUri="http://lightweather.azurewebsites.net/">疾速飞翔</Hyperlink><LineBreak/>
+                                            <Run>产品运营与发布：</Run><Hyperlink>Htto</Hyperlink>
+                        </TextBlock>
+                        <TextBlock TextAlignment="Center" Text="算法/架构：Htto。界面整体设计：疾速飞翔。" HorizontalAlignment="Center"  TextWrapping="Wrap" Margin="5,0,5,10" FontSize="15" />
+                        <TextBlock TextAlignment="Center" HorizontalAlignment="Center" FontSize="20">合作伙伴</TextBlock>
+                        <HyperlinkButton Margin="0,5,0,0" HorizontalAlignment="Center" NavigateUri="http://lightweather.azurewebsites.net/">
+                            <StackPanel Orientation="Horizontal" >
+                                <Border Background="{ThemeResource SystemControlBackgroundAccentBrush}" Margin="0,0,5,0">
+                                    <Image Height="25" Width="25" Source="ms-appx:///Assets/lw.png"/>
+                                </Border>
+                                <TextBlock FontSize="15"><Underline>极简天气UWP</Underline></TextBlock>
+                            </StackPanel>
+                        </HyperlinkButton>
+                        <HyperlinkButton Margin="0,-10,0,0" HorizontalAlignment="Center" >
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBlock FontSize="15"><Underline>微页</Underline></TextBlock>
+                            </StackPanel>
+                        </HyperlinkButton>
+
+                        <TextBlock Tapped="TextBlock_Tapped" TextAlignment="Center" HorizontalAlignment="Center"  TextWrapping="Wrap" Margin="5,3,5,10" FontSize="15" >
+                                            <Run FontSize="20">QQ群</Run><LineBreak/>
+                                            <Run>215685374</Run><LineBreak/>
+                        </TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Page>

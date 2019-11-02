@@ -1,0 +1,45 @@
+﻿<Page
+    x:Class="微数.Pages.引导页.基本页面索引"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:微数.Pages.引导页"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+	>
+    <ScrollViewer>
+        <Grid Background="LightGray" x:Name="MainPane" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Name="简单一元方程" Click="简单一元方程_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,5,0,0" Height="130" Width="170" Background="{ThemeResource SystemControlBackgroundAccentBrush}">
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock Name="btnIcon" Text="&#xED5E;" Foreground="White" FontSize="20" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center"/>
+                    <TextBlock Name="btnText" Foreground="White" FontSize="20" HorizontalAlignment="Center" Text="简单一元方程"></TextBlock>
+                </StackPanel>
+            </Button>
+
+            <Button Name="简单多元方程" Click="简单多元方程_Click"  HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Margin="5,5,0,0" Height="130" Width="170" Background="{ThemeResource SystemControlBackgroundAccentBrush}">
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock Name="btnIcon2" Text="&#xE1D0;" Foreground="White" FontSize="20" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center"/>
+                    <TextBlock Name="btnText2" Text="简单多元方程" Foreground="White" FontSize="20" HorizontalAlignment="Center"></TextBlock>
+                </StackPanel>
+            </Button>
+
+            <Button Name="化简" Click="化简_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Margin="5,5,0,0" Height="130" Width="170" Background="{ThemeResource SystemControlBackgroundAccentBrush}">
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock Name="btnIcon3" Text="&#xE7AC;" Foreground="White" FontSize="20" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center"/>
+                    <TextBlock Name="btnText3" Text="表达式化简" Foreground="White" FontSize="20" HorizontalAlignment="Center"></TextBlock>
+                </StackPanel>
+            </Button>
+        </Grid>
+    </ScrollViewer>
+</Page>

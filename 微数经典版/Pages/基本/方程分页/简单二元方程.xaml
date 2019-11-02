@@ -1,0 +1,78 @@
+﻿<Page
+    x:Class="微数2.Pages.基本.简单二元方程"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:微数2.Pages.基本"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <Style x:Key="InputBoxStyle" TargetType="TextBox">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+        </Style>
+    </Page.Resources>
+    <Grid Margin="0,0,0,0"
+          Name="MainPane" 
+		  ScrollViewer.HorizontalScrollMode="Enabled" 
+		  ScrollViewer.VerticalScrollMode="Enabled" 
+		  Background="{ThemeResource SystemControlBackgroundAccentBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Margin="0,10,0,20" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock FontSize="25" Foreground="White" HorizontalAlignment="Center">简单一元二元方程</TextBlock>
+        </StackPanel>
+        <StackPanel  Grid.Row="1" HorizontalAlignment="Center">
+            <TextBlock FontSize="30" Foreground="White" HorizontalAlignment="Center">
+                <Run Text="表达式"/>
+            </TextBlock>
+            <TextBlock Text="ax+by=c" FontSize="40" Foreground="White"/>
+            <TextBlock Text="dx+ex=f" FontSize="40" Foreground="White"/>
+        </StackPanel>
+        <Grid Grid.Row="2" Margin="10,10,10,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBox Name="ia" Style="{StaticResource InputBoxStyle}" Text="a" ></TextBox>
+            <TextBox Style="{StaticResource InputBoxStyle}" Margin="10,0,10,0"   Name="ib" Text="b"  Grid.Column="1"></TextBox>
+            <TextBox Style="{StaticResource InputBoxStyle}" Name="ic"  Text="c" FontSize="15" Grid.Column="2"></TextBox>
+        </Grid>
+        <Grid Grid.Row="3" Margin="10,10,10,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBox Style="{StaticResource InputBoxStyle}"  Name="id"  Grid.Column="0" ></TextBox>
+            <TextBox  Style="{StaticResource InputBoxStyle}" Margin="10,0,10,0"  Name="ie" Text="e" Grid.Column="1" ></TextBox>
+            <TextBox Style="{StaticResource InputBoxStyle}" Name="iff" Text="f" Grid.Column="2" ></TextBox>
+        </Grid>
+        <ScrollViewer Grid.Row="4" ScrollViewer.HorizontalScrollMode="Enabled">
+            <StackPanel Orientation="Horizontal"  Margin="10,5,0,0"  >
+                <Button Name="ClearButton" Foreground="White" Content="清空" FontSize="20" Click="ClearButton_Click" Background="{ThemeResource GridViewHeaderItemBackground}"></Button>
+                <Button Name="SureBottun" Foreground="White" Grid.Row="4" FontFamily="Segoe MDL2 Assets" FontSize="20" Background="{ThemeResource GridViewHeaderItemBackground}"
+                Margin="0,0,10,0" Click="Button_Click" >&#xE001;</Button>
+                <TextBlock FontSize="25" Foreground="White" > 结果:</TextBlock>
+                <TextBlock Name="ResultTextBlock" Width="200" Foreground="White" FontSize="25" TextWrapping="Wrap"></TextBlock>
+            </StackPanel>
+        </ScrollViewer>
+        <StackPanel Orientation="Horizontal" Grid.Row="5" Margin="10,15,0,0">
+            <TextBlock FontSize="20" Foreground="White"> 错误提示:</TextBlock>
+            <TextBlock Name="ErrorTextBlock" FontSize="20" Foreground="White"></TextBlock>
+        </StackPanel>
+    </Grid>
+</Page>

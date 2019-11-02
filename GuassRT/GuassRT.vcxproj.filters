@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resources">
+      <UniqueIdentifier>7ec2fd71-7161-4790-9c5e-488bf126a0fd</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tga;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Base">
+      <UniqueIdentifier>{c1105d3f-28fc-49e2-adda-abce7aa91685}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base\CPP">
+      <UniqueIdentifier>{d79451be-587f-4233-bec1-11604403fb8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class">
+      <UniqueIdentifier>{d0b51ac7-b6a3-478b-9b18-e60903703422}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\Tools">
+      <UniqueIdentifier>{d822d665-2b8f-4cda-a7fa-a697d2a588f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\CPP">
+      <UniqueIdentifier>{81d87d7e-9529-41c4-8639-cd3bd8a10dd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Merdog">
+      <UniqueIdentifier>{c76df715-5db1-4f9e-ba39-b97cf68c7e33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Merdog\include">
+      <UniqueIdentifier>{e755fbc4-4a3f-42c9-9973-2adbe6e79e10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Merdog\sources">
+      <UniqueIdentifier>{d8531776-021b-404b-ba1f-197ef083e9d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Merdog\include\clib">
+      <UniqueIdentifier>{dccb8c4c-05e3-4032-b45b-a47746bbbb0d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Code\Base\CPP\BalanceStack.cpp">
+      <Filter>Base\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Base\CPP\Count.cpp">
+      <Filter>Base\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Base\CPP\equation.cpp">
+      <Filter>Base\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Base\CPP\factorization.cpp">
+      <Filter>Base\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Base\CPP\fraction.cpp">
+      <Filter>Base\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Base\CPP\monomial.cpp">
+      <Filter>Base\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Base\CPP\polynomial.cpp">
+      <Filter>Base\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Base\CPP\rational_fraction.cpp">
+      <Filter>Base\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Base\CPP\simple_algorithm.cpp">
+      <Filter>Base\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\Tools\HttoTools.cpp">
+      <Filter>Class\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\Equation.cpp">
+      <Filter>Class\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\merdog\source\block.cpp">
+      <Filter>Merdog\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\merdog\source\error.cpp">
+      <Filter>Merdog\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\merdog\source\expr.cpp">
+      <Filter>Merdog\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\merdog\source\function.cpp">
+      <Filter>Merdog\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\merdog\source\if.cpp">
+      <Filter>Merdog\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\merdog\source\lexer.cpp">
+      <Filter>Merdog\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\merdog\source\loop_statement.cpp">
+      <Filter>Merdog\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\merdog\source\maths.cpp">
+      <Filter>Merdog\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\merdog\source\memory.cpp">
+      <Filter>Merdog\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\merdog\source\namespace.cpp">
+      <Filter>Merdog\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\merdog\source\parser.cpp">
+      <Filter>Merdog\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\merdog\source\structure.cpp">
+      <Filter>Merdog\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\merdog\source\value.cpp">
+      <Filter>Merdog\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\merdog\source\var.cpp">
+      <Filter>Merdog\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\merdog\source\word_record.cpp">
+      <Filter>Merdog\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\merdog\source\environment.cpp">
+      <Filter>Merdog\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\merdog\source\merdog_io.cpp">
+      <Filter>Merdog\sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Code\Base\BalanceStack.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Base\Count.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Base\equation.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Base\factorization.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Base\fraction.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Base\monomial.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Base\polynomial.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Base\rational_fraction.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Base\simple_algorithm.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\Tools\HttoTools.h">
+      <Filter>Class\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\Equation.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\merdog\include\block.hpp">
+      <Filter>Merdog\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\merdog\include\environment.hpp">
+      <Filter>Merdog\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\merdog\include\error.hpp">
+      <Filter>Merdog\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\merdog\include\expr.hpp">
+      <Filter>Merdog\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\merdog\include\function.hpp">
+      <Filter>Merdog\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\merdog\include\if.hpp">
+      <Filter>Merdog\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\merdog\include\lexer.hpp">
+      <Filter>Merdog\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\merdog\include\loop_statement.hpp">
+      <Filter>Merdog\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\merdog\include\memory.hpp">
+      <Filter>Merdog\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\merdog\include\namespace.hpp">
+      <Filter>Merdog\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\merdog\include\parser.hpp">
+      <Filter>Merdog\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\merdog\include\parser_node.hpp">
+      <Filter>Merdog\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\merdog\include\structure.hpp">
+      <Filter>Merdog\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\merdog\include\value.hpp">
+      <Filter>Merdog\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\merdog\include\var.hpp">
+      <Filter>Merdog\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\merdog\include\word_record.hpp">
+      <Filter>Merdog\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\merdog\include\clib\maths.hpp">
+      <Filter>Merdog\include\clib</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\merdog\include\clib\merdog_io.hpp">
+      <Filter>Merdog\include\clib</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

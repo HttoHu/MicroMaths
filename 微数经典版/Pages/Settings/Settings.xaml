@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="Micx.Pages.Settings.Settings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Micx.Pages.Settings"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ScrollViewer>
+        <StackPanel Background="White">
+            <Grid Background="LightBlue">
+                <TextBlock Grid.Column="1"
+                Margin="20,20,20,20" 
+                HorizontalAlignment="Right" 
+                FontSize="20" 
+                FontWeight="Bold"
+                FontStretch="Expanded"
+                Foreground="Black">
+                设置
+                </TextBlock>
+            </Grid>
+            <ToggleSwitch Margin="20" Name="togswitch_hide_keyboard"
+                          Header="隐藏键盘"
+                          Toggled="togswitch_hide_keyboard_Toggled"></ToggleSwitch>
+            <Button 
+                Name="btn_about"
+                HorizontalAlignment="Stretch" 
+                Background="White" 
+                FontSize="30"
+                Click="btn_about_click"
+                    >
+                关于开发者
+            </Button>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

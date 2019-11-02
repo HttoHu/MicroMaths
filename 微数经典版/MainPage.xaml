@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="Micx.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Micx"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Grid Name="MainPane">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="{ThemeResource SystemControlBackgroundAccentBrush}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Name="btn_BootBasePages" Grid.Column="0"  
+                FontSize="20" Content="基本" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                    Click="btn_BootBasePages_Click" Background="{ThemeResource SystemControlBackgroundAccentBrush}"></Button>
+            <Button Name="btn_BootSeniorPages" Grid.Column="1" 
+                FontSize="20" Content="更新内容" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                    Click="btn_BootSeniorPages_Click" Background="{ThemeResource SystemControlBackgroundAccentBrush}"></Button>
+            <Button Name="btn_BootSettingPages" Grid.Column="2" 
+                FontSize="20" Content="设置" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                    Click="btn_BootSettingPages_Click" Background="{ThemeResource SystemControlBackgroundAccentBrush}"></Button>
+        </Grid>
+        <Frame Name="MyFrame" Background="{ThemeResource SystemControlBackgroundAccentBrush}" Grid.Row="1" Margin="0,0,0,-5" Grid.RowSpan="3">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock FontSize="40" FontWeight="ExtraLight" HorizontalAlignment="Center" Foreground="White">欢迎使用</TextBlock>
+                <TextBlock FontSize="40" FontWeight="ExtraLight" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White">微数</TextBlock>
+            </StackPanel>
+        </Frame>
+    </Grid>
+
+</Page>

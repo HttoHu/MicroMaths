@@ -1,0 +1,80 @@
+﻿<Page
+    x:Class="Micx.Pages.Advance.Changelog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Micx.Pages.Advance"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ScrollViewer Background="LightYellow">
+        <StackPanel Background="White">
+            <Grid Background="LightBlue">
+                <TextBlock Grid.Column="1"
+                Margin="20,20,20,20" 
+                HorizontalAlignment="Right" 
+                FontSize="20" 
+                FontWeight="Bold"
+                FontStretch="Expanded"
+                Foreground="Black">
+                更新日志
+                </TextBlock>
+            </Grid>
+
+            <StackPanel>
+
+
+                <!--V1-->
+                <StackPanel Margin="10" >
+                    <TextBlock Margin="10"
+                FontSize="20"
+                HorizontalAlignment="Center">
+                2018 8-18 更新内容:
+                    </TextBlock>
+                    <TextBlock Margin="10" TextWrapping="Wrap">1. 修复了一些bug, 还有很多bug... (如果乱报错,尝试重启本软件)</TextBlock>
+                    <TextBlock Margin="10" TextWrapping="Wrap">2. 多元一次方程修复了解不正确的bug, 注:仅适用于一次方程, 解多次方程可能能解,但是解不可信任.</TextBlock>
+                    <TextBlock Margin="10" TextWrapping="Wrap">3. 历史记录恢复正常了, 上次一个手滑改了一个单词... 导致排版</TextBlock>
+                </StackPanel>
+                <!--V2-->
+                <StackPanel Margin="10" >
+
+
+                    <TextBlock Margin="10"
+                FontSize="20"
+                HorizontalAlignment="Center">
+                2018 8-10 更新内容:
+                    </TextBlock>
+                    <TextBlock Margin="10" TextWrapping="Wrap">1. 加了一个解释器 Merdog ,现在可以在里面编程了</TextBlock>
+                    <HyperlinkButton Margin="10,0,10,0" NavigateUri="https://github.com/HttoHu/Merdog">Merdog Github</HyperlinkButton>
+                    <TextBlock Margin="10" TextWrapping="Wrap">2. 优化了界面,还有17年10-4日的大饼暂时实现不了了。。</TextBlock>
+                </StackPanel>
+                <!--V1-->
+                <StackPanel Margin="20">
+                    <TextBlock 
+                FontSize="20"
+                HorizontalAlignment="Center">
+                2017 10-5 更新内容:
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap">1. 修复了历史记录无法滑动的bug</TextBlock>
+                    <TextBlock TextWrapping="Wrap">2. 修复手机显示状态栏不正确的bug</TextBlock>
+                    <TextBlock TextWrapping="Wrap">3. 计算时输入将不会清空</TextBlock>
+                </StackPanel>
+                <!--V0-->
+                <StackPanel Margin="20">
+                    <TextBlock 
+                FontSize="20"
+                HorizontalAlignment="Center">
+                2017 10-4 更新内容:
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap">1. 使用了全新的数学库 Gauss(已停止更新)</TextBlock>
+                    <TextBlock TextWrapping="Wrap">2. 支持结果是根号, 分数, 更强大的方程计算器</TextBlock>
+                    <TextBlock TextWrapping="Wrap">3. 多元方程升级支持n元一次方程 支持更自由的表达式(注意此功能对根号支持不友好)</TextBlock>
+                    <TextBlock TextWrapping="Wrap">4. 计算器取代了原来的化简表达式, 支持更复杂的多项式化简, 并且支持
+                根号和分数</TextBlock>
+                    <TextBlock TextWrapping="Wrap">5. 砍掉了不等式功能(我会在下个功能下加入, 到时候使用上全新的数学库 支持集合运算)</TextBlock>
+                </StackPanel>
+
+            </StackPanel>
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>

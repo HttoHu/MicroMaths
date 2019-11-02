@@ -1,0 +1,48 @@
+﻿<Page
+    x:Class="微数经典版.Pages.Home.Merdog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:微数经典版.Pages.Home"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <CommandBar Background="Orange" Name="EditorBar" Margin="10"  Height="50" DefaultLabelPosition="Right">
+            <CommandBar.Content >
+                <TextBlock Name="SFileName" Margin="20,12,0,0" FontSize="20">new.mer</TextBlock>
+            </CommandBar.Content>
+            <AppBarButton Name="Refresh" Icon="Refresh" Click="Refresh_Click" Label="刷新行数"></AppBarButton>
+            <AppBarButton Name="Run" Icon="Play" Click="Run_Click" Label="运行"></AppBarButton>
+            <AppBarButton Name="Save" Icon="Save" Click="Save_Click" Label="保存"></AppBarButton>
+            <AppBarButton Name="Open" Icon="OpenFile" Click="Open_Click" Label="打开文件"></AppBarButton>
+            <AppBarSeparator/>
+            <AppBarButton Name="Reference" Icon="Help" Label="参考手册" Click="Reference_Click"></AppBarButton>
+            <AppBarButton Name="SaveAs" Icon="SaveLocal" Click="SaveAs_Click" Label="另存为"></AppBarButton>
+
+        </CommandBar>
+        <ScrollViewer Grid.Row="1" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock  FontFamily="Consolas" Name="LineNo" Margin="7,0,0,0" FontSize="15">1</TextBlock>
+                </StackPanel>
+
+                <TextBox FontSize="15" ScrollViewer.VerticalScrollBarVisibility="Auto" Grid.Column="1"
+                      Margin="5,0,0,0"
+                      FontFamily="Consolas"
+                     BorderThickness="1" Name="Editor" AcceptsReturn="True" IsTextPredictionEnabled="True"
+                     KeyDown="Editor_KeyDown"
+                     ></TextBox>
+            </Grid>
+
+        </ScrollViewer>
+    </Grid>
+</Page>

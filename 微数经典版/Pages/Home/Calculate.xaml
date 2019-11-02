@@ -1,0 +1,181 @@
+﻿<Page
+    x:Class="Micx.Pages.Home.Calculate"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Micx.Pages.Home"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <Style x:Name="ShowTextBlock" x:Key="ShowTextBlock" TargetType="TextBlock">
+            <Setter x:Name="Frontsize" Property="FontSize" Value="25"/>
+        </Style>
+        <Style  x:Key="CommonWhiteButtonStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="Background" Value="Snow"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="ClickMode" Value="Press"/>
+        </Style>
+        <Style x:Key="ControlButtonStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="Background" Value="LightGray"/>
+            <Setter Property="FontWeight" Value="Light"/>
+            <Setter Property="FontFamily" Value="Segoe MDL2 Assets"/>
+        </Style>
+    </Page.Resources>
+    <Grid Name="MainPane" Background="WhiteSmoke" Margin="0,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <!--标题栏-->
+            <Grid Name="Head" Margin="20" Background="LightBlue">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button 
+                    FontFamily="Segoe MDL2 Assets"
+                    Name="Histroy"
+                    Background="{ThemeResource GridViewHeaderItemBackground}"
+                    Click="Histroy_Click"
+                    >
+                    &#xE07F;
+                </Button>
+                <TextBlock Grid.Column="1"
+                Margin="20,20,20,20" 
+                HorizontalAlignment="Right" 
+                FontSize="20" 
+                Style="{StaticResource ShowTextBlock}" 
+                FontStretch="Expanded"
+                Foreground="Black">
+                Calculator
+                </TextBlock>
+            </Grid>
+
+            <TextBox 
+                Margin="10,10,20,0" 
+                TextAlignment="Right" 
+                Name="inputBox" 
+                FontSize="30"  
+                BorderBrush="Gray" 
+                BorderThickness="0" 
+                Background="{ThemeResource GridViewHeaderItemBackground}" 
+                Foreground="Black"
+                >
+            </TextBox>
+            <ScrollViewer Height="70">
+                <TextBlock 
+                    Name="txt_AnswerTextBlock" 
+                    TextAlignment="Right" 
+                     TextWrapping="Wrap" 
+                     Margin="20,0,20,0" 
+                      FontWeight="Bold" 
+                     Foreground="{Binding forg}" 
+                     FontSize="40" 
+                    Style="{StaticResource ShowTextBlock}">
+                </TextBlock>
+            </ScrollViewer>
+            <!--中间的按键-->
+        </StackPanel>
+        <!--主要部分-->
+        <Grid Grid.Row="1" Background="{Binding Mod}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Margin="0,10,0,0" Background="{Binding Mod}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+            <Grid Name="MMKeyBoard" Background="{Binding Mod}" Grid.Row="1" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <!--第一排-->
+                <Grid Grid.ColumnSpan="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button 
+                        Foreground="{Binding forg}" 
+                        Name="btn_Count" 
+                        VerticalAlignment="Stretch"
+                        HorizontalAlignment="Stretch" 
+                        Style="{StaticResource ControlButtonStyle}"
+                        Click="btn_Count_Click">&#xE82F;</Button>
+                    <Button 
+                        Foreground="{Binding forg}"  
+                        Grid.Column="1" 
+                        Margin="0,0,0,0" 
+                        Name="btn_Clear"
+                        VerticalAlignment="Stretch" 
+                        HorizontalAlignment="Stretch" 
+                        Style="{StaticResource ControlButtonStyle}" Click="btn_Clear_Click" >&#xE107;</Button>
+                    <Button 
+                        Foreground="{Binding forg}" 
+                        Grid.Column="2" 
+                        Margin="0,0,0,0" 
+                        Name="btn_Del" 
+                        VerticalAlignment="Stretch"
+                        HorizontalAlignment="Stretch" 
+                        Style="{StaticResource ControlButtonStyle}" 
+                        Click="btn_Del_Click">&#xE150;</Button>
+                </Grid>
+                <!--#region -->
+                <!--第一排-->
+                <Button Foreground="{Binding forg}" Name="btn_KB07" Grid.Row="1" Grid.Column="0" Style="{StaticResource CommonWhiteButtonStyle}" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="KeyBoardClick">7</Button>
+                <Button Foreground="{Binding forg}" Name="btn_KB08" Grid.Row="1" Grid.Column="1" Style="{StaticResource CommonWhiteButtonStyle}" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="KeyBoardClick">8</Button>
+                <Button Foreground="{Binding forg}" Name="btn_KB09" Grid.Row="1" Grid.Column="2" Style="{StaticResource CommonWhiteButtonStyle}" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="KeyBoardClick">9</Button>
+                <Button Foreground="{Binding forg}" Name="btn_KB0SC" Grid.Row="1" Grid.Column="3" Style="{StaticResource CommonWhiteButtonStyle}" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="KeyBoardClick" Content="."></Button>
+                <Button Foreground="{Binding forg}" Name="btn_KB0N" Grid.Row="1" Grid.Column="4" Style="{StaticResource CommonWhiteButtonStyle}" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="KeyBoardClick" Content="^"></Button>
+                <!--#endregion-->
+                <!--#region -->
+                <!--第二排-->
+                <Button Foreground="{Binding forg}" Name="btn_KB04" Grid.Row="2" Grid.Column="0" Style="{StaticResource CommonWhiteButtonStyle}" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="KeyBoardClick">4</Button>
+                <Button Foreground="{Binding forg}" Name="btn_KB05" Grid.Row="2" Grid.Column="1" Style="{StaticResource CommonWhiteButtonStyle}" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="KeyBoardClick">5</Button>
+                <Button Foreground="{Binding forg}" Name="btn_KB06" Grid.Row="2" Grid.Column="2" Style="{StaticResource CommonWhiteButtonStyle}" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="KeyBoardClick">6</Button>
+                <Button Foreground="{Binding forg}" Name="btn_KB0BC" Grid.Row="2" Grid.Column="3" Style="{StaticResource CommonWhiteButtonStyle}" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="KeyBoardClick" Content="/"></Button>
+                <Button Foreground="{Binding forg}" Name="btn_KB0Plus" Grid.Row="2" Grid.Column="4" Style="{StaticResource CommonWhiteButtonStyle}" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="KeyBoardClick" Content="+"></Button>
+                <!--#endregion-->
+                <!--#region -->
+                <!--第三排-->
+                <Button Foreground="{Binding forg}"  Name="btn_KB01" Grid.Row="3" Grid.Column="0" Style="{StaticResource CommonWhiteButtonStyle}" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="KeyBoardClick">1</Button>
+                <Button Foreground="{Binding forg}" Name="btn_KB02" Grid.Row="3" Grid.Column="1" Style="{StaticResource CommonWhiteButtonStyle}" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="KeyBoardClick">2</Button>
+                <Button Foreground="{Binding forg}" Name="btn_KB03" Grid.Row="3" Grid.Column="2" Style="{StaticResource CommonWhiteButtonStyle}" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="KeyBoardClick">3</Button>
+                <Button Foreground="{Binding forg}" Name="btn_KB0Eq" Grid.Row="3" Grid.Column="3" Style="{StaticResource CommonWhiteButtonStyle}" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="KeyBoardClick" Content="="></Button>
+                <Button Foreground="{Binding forg}" Name="btn_KB0Mins" Grid.Row="3" Grid.Column="4" Style="{StaticResource CommonWhiteButtonStyle}" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="KeyBoardClick" Content="-"></Button>
+                <!--#endregion-->
+                <!--#region -->
+                <!--第三排-->
+                <Button Foreground="{Binding forg}" Name="btn_KB0S" Grid.Row="4" Grid.Column="0" Style="{StaticResource CommonWhiteButtonStyle}" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="KeyBoardClick">*</Button>
+                <Button Foreground="{Binding forg}" Name="btn_KB00" Grid.Row="4" Grid.Column="1" Style="{StaticResource CommonWhiteButtonStyle}" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="KeyBoardClick">0</Button>
+                <Button Foreground="{Binding forg}" Name="btn_KB0x" Grid.Row="4" Grid.Column="2" Style="{StaticResource CommonWhiteButtonStyle}" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="KeyBoardClick">x</Button>
+                <Button Foreground="{Binding forg}" Name="btn_KB0ELk" Grid.Row="4" Grid.Column="3" Style="{StaticResource CommonWhiteButtonStyle}" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="KeyBoardClick" Content="("></Button>
+                <Button Foreground="{Binding forg}" Name="btn_KB0Rk" Grid.Row="4" Grid.Column="4" Style="{StaticResource CommonWhiteButtonStyle}" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="KeyBoardClick" Content=")"></Button>
+                <!--#endregion-->
+            </Grid>
+            <!--KeyBoard-->
+        </Grid>
+    </Grid>
+</Page>
